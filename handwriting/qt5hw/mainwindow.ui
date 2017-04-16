@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>load</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>train</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>clear</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>recognize</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="recognitionDisplay">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>570</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuBrush">
+    <property name="title">
+     <string>Br&amp;ush</string>
+    </property>
+    <widget class="QMenu" name="menuSize">
+     <property name="title">
+      <string>Size</string>
+     </property>
+     <addaction name="action2px"/>
+     <addaction name="action5px"/>
+     <addaction name="action10px"/>
+    </widget>
+    <widget class="QMenu" name="menuColour">
+     <property name="title">
+      <string>Colour</string>
+     </property>
+     <addaction name="actionBlack"/>
+     <addaction name="actionRed"/>
+     <addaction name="actionGreen"/>
+     <addaction name="actionBlue"/>
+    </widget>
+    <addaction name="menuSize"/>
+    <addaction name="menuColour"/>
+   </widget>
+   <addaction name="menuHelp"/>
+   <addaction name="menuBrush"/>
+  </widget>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="action2px">
+   <property name="text">
+    <string>2px</string>
+   </property>
+  </action>
+  <action name="action5px">
+   <property name="text">
+    <string>5px</string>
+   </property>
+  </action>
+  <action name="action10px">
+   <property name="text">
+    <string>10px</string>
+   </property>
+  </action>
+  <action name="actionBlack">
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="actionWhite">
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="actionRed">
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionGreen">
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionBlue">
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>clear_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>recognize_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>load_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>train_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>clear_click()</slot>
+  <slot>recognize_click()</slot>
+  <slot>load_click()</slot>
+  <slot>train_click()</slot>
+ </slots>
+</ui>
